@@ -39,7 +39,7 @@ _________________________________________
             print('False Input.')
             self.clear()
             Proxy().Scrape()
-        proxy = requests.get(f'https://api.proxyscrape.com/?request=getproxies&proxytype={Type_Choice}&timeout=10000&country=all&ssl=all&anonymity=all')
+        proxy = requests.get(f'https://api.proxyscrape.com/?request=getproxies&proxytype={Type_Choice}&timeout=1000&country=all&ssl=all&anonymity=all')
         self.file.write(bytes(proxy.content))
 
 if __name__ == "__main__":
